@@ -61,7 +61,7 @@ public:
 			}
 		}
 	}
-	void PushFront(T data) {//вставляет элемент с головы
+	void PushFront(T data) {//ГўГ±ГІГ ГўГ«ГїГҐГІ ГЅГ«ГҐГ¬ГҐГ­ГІ Г± ГЈГ®Г«Г®ГўГ»
 		Node* curNode = m_head;
 		if (m_size == 0) {
 			curNode = new Node(data, sizeDataNode - 1);
@@ -92,7 +92,7 @@ public:
 		}
 	}
 	
-	T& operator[](int index) {//индексация
+	T& operator[](int index) {
 		
 		if (index < m_ptrDataNode[0]->fillingArray()) {
 			return m_ptrDataNode[0]->m_data[sizeDataNode - m_ptrDataNode[0]->fillingArray() + index];
@@ -126,7 +126,7 @@ private:
 			pPrev = 0;
 		}
 
-		int fillingArray() {//вывод кол-во занятых элементов
+		int fillingArray() {
 			int temp = sizeDataNode;
 			for (int i = 0; i < sizeDataNode; i++) {
 				if (m_data[i] == 0) {
